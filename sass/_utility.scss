@@ -1,0 +1,29 @@
+body {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  //   overflow: hidden;
+  font-family: $font-family-default;
+}
+.container {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 70rem;
+}
+.container--inner {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 60rem;
+}
+// SMALL UTILITY CLASSES
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.mt--1 {
+  margin-top: -1rem;
+}
+.mt--2 {
+  margin-top: -2rem;
+}

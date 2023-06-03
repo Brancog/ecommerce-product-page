@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer type="module" src="/main.js"></script>
+    <title>ecommerce product page</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar__wrap">
+          <a href="#" class="navbar__sandwich-btn"
+            ><img src="images/icon-menu.svg" alt="mobile menu toggle button"
+          /></a>
+          <a href="#" class="navbar__logo"
+            ><img src="images/logo.svg" alt="sneakers logo"
+          /></a>
+
+          <ul class="navbar__links">
+            <li><a href="#" class="navbar__link">Collections</a></li>
+            <li><a href="#" class="navbar__link">Men</a></li>
+            <li><a href="#" class="navbar__link">Women</a></li>
+            <li><a href="#" class="navbar__link">About</a></li>
+            <li><a href="#" class="navbar__link">Contact</a></li>
+          </ul>
+
+          <div class="navbar__cart-user">
+            <a href="#" class="navbar__cart"
+              ><img src="images/icon-cart.svg" alt="your cart"
+            /></a>
+            <a href="#" class="navbar__user"
+              ><img src="images/image-avatar.png" alt="your user profile"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class="main-content">
+      <div class="slider-gallery">
+        <a href="#" class="slider-gallery__btn-prev"
+          ><img
+            class=""
+            src="./images/icon-previous.svg"
+            alt="previous gallery image"
+        /></a>
+        <a href="#" class="slider-gallery__btn-next"
+          ><img class="" src="./images/icon-next.svg" alt="next gallery image"
+        /></a>
+
+        <div class="slider-gallery__img-wrap">
+          <img
+            src="images/image-product-1.jpg"
+            alt="photo of a pair of sneakers"
+          />
+        </div>
+        <div class="slider-gallery__img-wrap">
+          <img
+            src="images/image-product-2.jpg"
+            alt="photo of a pair of sneakers"
+          />
+        </div>
+        <div class="slider-gallery__img-wrap">
+          <img
+            src="images/image-product-3.jpg"
+            alt="photo of a pair of sneakers"
+          />
+        </div>
+        <div class="slider-gallery__img-wrap">
+          <img
+            src="images/image-product-4.jpg"
+            alt="photo of a pair of sneakers"
+          />
+        </div>
+        <div class="slider-gallery__dots">
+          <button class="slider-gallery__dots-dot" data-slide="0"></button>
+          <button class="slider-gallery__dots-dot" data-slide="1"></button>
+          <button class="slider-gallery__dots-dot" data-slide="2"></button>
+          <button class="slider-gallery__dots-dot" data-slide="3"></button>
+        </div>
+      </div>
+      <div class="product">
+        <div class="container--inner">
+          <span class="product__company">sneaker company</span>
+          <h1 class="product__heading">Fall Limited Edition Sneakers</h1>
+          <p class="product__description">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they'll withstand everything
+            the weather can offer.
+          </p>
+          <div class="product__pricing">
+            <div class="product__price-wrap">
+              <span class="product__price">$125.00</span>
+              <span class="product__discount">50%</span>
+            </div>
+            <span class="product__full-price">$250.00</span>
+          </div>
+          <div class="product__cta">
+            <div class="product__quantity">
+              <a
+                class="product__quantity-btn product__quantity-btn--minus"
+                href="#"
+              >
+                <img
+                  class="product__quantity-minus"
+                  src="./images/icon-minus.svg"
+                  alt=""
+                />
+              </a>
+              <input
+                placeholder="0"
+                class="product__quantity-input"
+                type="number"
+                name=""
+                id=""
+                min="1"
+                max="9"
+              />
+              <a
+                class="product__quantity-btn product__quantity-btn--plus"
+                href="#"
+              >
+                <img
+                  class="product__quantity-plus"
+                  src="./images/icon-plus.svg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <a href="#" class="product__add-to-cart-btn"
+              ><img src="images/icon-cart.svg" alt="" />Add to cart</a
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
