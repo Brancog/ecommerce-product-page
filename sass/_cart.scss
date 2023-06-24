@@ -4,13 +4,13 @@
   transition: opacity 0.3s ease-in-out;
   z-index: 15;
   position: absolute;
-  width: 90%;
+  width: 100%;
   max-width: 32rem;
   height: 20rem;
   background-color: $color-neutral-white;
   border-radius: 0.8rem;
-  right: 5%;
-  top: calc(5vh + 2rem);
+  right: 0;
+  top: calc(4vh + 2.5rem);
   -webkit-box-shadow: -3px 11px 51px -7px rgba(0, 0, 0, 0.54);
   -moz-box-shadow: -3px 11px 51px -7px rgba(0, 0, 0, 0.54);
   box-shadow: -3px 11px 51px -7px rgba(0, 0, 0, 0.54);
