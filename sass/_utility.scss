@@ -1,14 +1,34 @@
+html {
+  height: 100%;
+}
+
 body {
   position: relative;
   height: 100%;
   width: 100%;
-  //   overflow: hidden;
   font-family: $font-family-default;
+}
+
+.fullscreen-overlay {
+  background-color: rgba($color: #000000, $alpha: 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  transition: all 0.5s ease-in-out;
+  z-index: 15;
+}
+.lightbox-overlay {
+  background-color: rgba($color: #000000, $alpha: 0.7);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  transition: all 0.5s ease-in-out;
+  z-index: 15;
 }
 .container {
   margin: 0 auto;
   width: 90%;
-  max-width: 70rem;
+  max-width: 80rem;
 }
 .container--inner {
   margin: 0 auto;
@@ -26,4 +46,27 @@ body {
 }
 .mt--2 {
   margin-top: -2rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@media (width >= 60em) and (orientation: landscape) {
+  .container--inner {
+    width: initial;
+    max-width: none;
+    margin: 0;
+  }
+}
+
+@media (width<60em) {
+  .lightbox-overlay {
+    display: none;
+  }
 }

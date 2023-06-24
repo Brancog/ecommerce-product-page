@@ -1,4 +1,5 @@
 .navbar {
+  position: relative;
   &__wrap {
     display: flex;
     align-items: center;
@@ -13,6 +14,11 @@
   }
   &__logo {
     margin-right: 3rem;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 
   &__links {
@@ -27,6 +33,11 @@
   &__link:visited {
     position: relative;
     color: $color-neutral-dark-grayish-blue;
+    transition: color 0.2s ease-in-out;
+  }
+
+  &__link:hover {
+    color: $color-neutral-black;
   }
 
   &__link::after {
@@ -34,7 +45,7 @@
     position: absolute;
 
     transition: opacity 0.2s ease-in-out;
-    top: 4.05rem;
+    top: 3.9375rem;
     left: 0;
     opacity: 0;
     visibility: hidden;
@@ -55,17 +66,39 @@
     margin-left: auto;
   }
   &__cart {
+    position: relative;
     width: 1.5rem;
     transition: filter, -webkit-filter 0.2s ease;
     transform: translateY(2px);
     img {
+      transition: filter 0.2s ease-in-out;
       width: 100%;
       height: auto;
     }
+    img:hover {
+      -webkit-filter: brightness(0.5);
+      filter: brightness(-50%);
+    }
+  }
+  &__cart-qt {
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+    right: -5px;
+    top: -5px;
+    width: 1.4rem;
+    height: 1rem;
+    background-color: $color-primary-orange;
+    border-radius: 1rem;
+
+    font-size: 0.8rem;
+    color: $color-neutral-white;
+    font-weight: $font-weight-bold;
   }
   &__cart:hover {
-    -webkit-filter: brightness(0.5);
-    filter: brightness(-50%);
   }
 
   &__user {
@@ -85,11 +118,52 @@
   }
 }
 
-@media (min-width: 48em) {
+// ACTIVATE WIDE NAVBAR LINKS AND HIDE SANDWICH BUTTON
+@media (width >= 48em) {
+  .navbar {
+    &__wrap {
+      padding: 2rem 0;
+    }
+    &__cart-user {
+      gap: 1.5rem;
+    }
+
+    &__user {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+  }
+}
+
+// TABLETS MEDIA QUERIES
+@media (width >= 48em) and (orientation: portrait) {
+  .navbar {
+    &__link {
+      font-size: 1.2rem;
+    }
+
+    &__sandwich-btn {
+      width: 1.5rem;
+
+      img {
+        width: 1.5rem;
+      }
+    }
+
+    &__logo {
+      width: 12rem;
+    }
+
+    &__cart {
+      width: 2rem;
+    }
+  }
+}
+
+@media (width >= 60em) and (orientation: landscape) {
   .navbar {
     &__wrap {
       border-bottom: 1px solid $color-neutral-grayish-blue;
-      padding: 2rem 0;
     }
 
     &__sandwich-btn {
@@ -100,7 +174,7 @@
     }
 
     &__cart-user {
-      gap: 1.5rem;
+      gap: 2rem;
     }
 
     &__user {

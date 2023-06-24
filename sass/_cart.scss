@@ -1,0 +1,127 @@
+.cart {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 15;
+  position: absolute;
+  width: 90%;
+  max-width: 32rem;
+  height: 20rem;
+  background-color: $color-neutral-white;
+  border-radius: 0.8rem;
+  right: 5%;
+  top: calc(5vh + 2rem);
+  -webkit-box-shadow: -3px 11px 51px -7px rgba(0, 0, 0, 0.54);
+  -moz-box-shadow: -3px 11px 51px -7px rgba(0, 0, 0, 0.54);
+  box-shadow: -3px 11px 51px -7px rgba(0, 0, 0, 0.54);
+
+  &__wrap {
+    position: relative;
+    height: 100%;
+  }
+
+  &__top-bar {
+    padding: 1rem 1.5rem 2rem 1.5rem;
+    color: $color-neutral-black;
+    font-weight: $font-weight-bold;
+    font-size: 1.125rem;
+    border-bottom: 1px solid $color-neutral-grayish-blue;
+  }
+  &__product {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 2rem 1rem;
+  }
+
+  &__empty {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+
+    span {
+      color: $color-neutral-dark-grayish-blue;
+      font-size: 1.25rem;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  &__product-img-wrap {
+    width: 30%;
+    max-width: 5rem;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 0.3rem;
+    }
+  }
+  &__product-details {
+    color: $color-neutral-dark-grayish-blue;
+    line-height: 1.7;
+  }
+  &__product-name {
+  }
+
+  &__product-price {
+  }
+  &__product-total-price {
+    color: $color-neutral-black;
+    font-weight: $font-weight-bold;
+  }
+  &__delete {
+    width: 1.5rem;
+    img {
+      width: 100%;
+      height: auto;
+    }
+    img:hover {
+      filter: brightness(-50%);
+      -webkit-filter: brightness(-50%);
+    }
+  }
+
+  &__checkout {
+    display: flex;
+    justify-content: center;
+    padding: 0rem 1rem 2rem 1rem;
+  }
+
+  &__checkout-btn,
+  &__checkout-btn:link,
+  &__checkout-btn:visited {
+    transition: opacity 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-primary-orange;
+    text-align: center;
+    color: $color-neutral-white;
+    font-weight: $font-weight-bold;
+    width: 100%;
+    border-radius: 0.5rem;
+    height: 4rem;
+  }
+  &__checkout-btn:hover {
+    opacity: 0.6;
+  }
+}
+
+// TABLET
+@media (width >= 48em) and (orientation: portrait) {
+  .cart {
+    width: 50%;
+  }
+}
+
+@media (width>=60em) {
+  .cart {
+    width: 30%;
+
+    &__product {
+      gap: 1rem;
+    }
+  }
+}
