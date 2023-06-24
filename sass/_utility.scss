@@ -25,16 +25,16 @@ body {
   transition: all 0.5s ease-in-out;
   z-index: 15;
 }
-.cart__container {
-  margin: 0 auto;
-  width: 90%;
-  max-width: 100rem;
-  position: relative;
-}
 .container {
   margin: 0 auto;
   width: 90%;
   max-width: 80rem;
+}
+.container--cart {
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 100rem;
 }
 .container--inner {
   margin: 0 auto;
